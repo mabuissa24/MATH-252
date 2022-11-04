@@ -2,7 +2,7 @@ import math
 
 
 def bsgs(g,h,p):
-    # your code here
+    # Runs the Babystep-Giantstep algorithm in order to solve the discrete logarithm problem for up to 40 bit primes
     return bsgsBoundedOrder(g, h, p, p - 1)
 
 

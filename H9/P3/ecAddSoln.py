@@ -1,4 +1,5 @@
 def ecAdd(P,Q,A,B,p):
+    # Returns the sum of P and Q on the defined elliptic curve
     if P == 0:
         return Q
     if Q == 0:

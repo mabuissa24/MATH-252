@@ -1,4 +1,5 @@
 def analyzeElgamal(g,p,A,c11,c12,m1,c21,c22):
+    # Returns a message decyphered from Elgamal encryption given two values of c1 and c2 that we know were generated used the same ephemeral key 
     m2 = (modpow(m1, -1, p) * c12) % p
     m2 = modpow(m2, -1, p)
     m2 = (m2 * c22) % p

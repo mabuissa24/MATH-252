@@ -1,4 +1,5 @@
 def crt(a1,m1,a2,m2):
+    # Runs the Chinese Remainder Theorem
     if m1 < m2:
         temp1, temp2 = a1, m1
         a1, m1 = a2, m2

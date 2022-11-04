@@ -2,6 +2,7 @@ import sys
 
 
 def relatedkeys(g,p,A,c11,c12,m1,c21,c22):
+    # Returns the decrypted message assuming that we know that the second ephemeral message is u(k) + v for some u and v between 1 and 100
     for u in range(1, 100):  # Find u, v that work
         for v in range(1, 100):
             rightSide = (modpow(c11, u, p) * modpow(g, v, p)) % p
@@ -9,12 +10,10 @@ def relatedkeys(g,p,A,c11,c12,m1,c21,c22):
                 break
         if c21 % p == rightSide:
             break
-
     m2 = (modpow(m1, -1, p) * c12) % p
     m2 = (modpow(m2, u, p) * modpow(A, v, p)) % p
     m2 = modpow(m2, -1, p)
     m2 = (m2 * c22) % p
-
     return m2
 
 

@@ -1,6 +1,7 @@
 import math
 
 def bsgsBoundedOrder(g,h,p,q):
+    # Runs the Babystep-Giantstep algorithm with bounded order g
     n = math.ceil(math.sqrt(q))
     first = dict()
     second = dict()

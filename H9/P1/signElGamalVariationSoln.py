@@ -1,4 +1,5 @@
 def signElGamalVariation(p,g,a,d):
+    # Produces a valid signature to a modified version of Elgamal
     s1 = 1
     s2 = (a * d) % (p - 1)
     return (s1,s2)

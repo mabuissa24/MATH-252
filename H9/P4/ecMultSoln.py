@@ -1,4 +1,5 @@
 def ecMult(n,P,A,B,p):
+    # Returns the integer multiple nP of a point P on an elliptic curve 
     if n == 0:
         return 0
     return ecMultHelper(n, P, A, B, p)

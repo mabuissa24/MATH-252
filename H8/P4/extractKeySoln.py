@@ -2,6 +2,7 @@ import math
 
 
 def extractKey(p,g,A,d1,s11,s12,d2,s21,s22):
+    # Returns the private key of someone generating two Elgamal signatures using the same ephemeral key
     aFactor, M = linearCong(s21 * s12 - s11 * s22, d2 * s12 - d1 * s22, p - 1)
     a = aFactor
     while True:

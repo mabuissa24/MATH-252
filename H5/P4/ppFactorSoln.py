@@ -1,5 +1,5 @@
 def ppFactor(N):
-    # Your code here: make a list "factors"
+    # Returns all prime factors of N
     factors = []
     index = -1
     for i in range(2, 2**16):

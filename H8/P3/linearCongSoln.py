@@ -1,6 +1,7 @@
 import math
 
 def linearCong(m,b,N):
+    # Solves congruence mx cong b (mod N) in the form x = sol mod N 
     gcd = math.gcd(m, N)
     # m / gcd * x = b / gcd + kN / gcd
     if b % gcd != 0:
@@ -11,8 +12,6 @@ def linearCong(m,b,N):
     mInv = inverse(m, N)
     sol = (b * mInv) % N
     return sol, N
-
-    # The function should either "return None" or "return r,M", where the solution is x = r momod M.
 
 
 def inverse(a, b):  # Return the inverse of a mod b

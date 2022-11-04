@@ -1,6 +1,7 @@
 import random
 
 def dh(g,p,B):
+    # Find necessary numbers for Diffie-Hellman algorithm 
     a = int(g * random.random())
     A = modpow(g, a, p)
     S = modpow(B, a, p)

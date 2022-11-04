@@ -2,6 +2,7 @@ import math
 import random
 
 def strongPrime(qbits,pbits):
+    # Returns a prime with qbits bits, a prime with pbits bits, and a larger prime p such that the first divides p - 1 and the second divides p + 1
     q1 = randPrime(2 ** (qbits - 1), 2 ** qbits)
     q2 = randPrime(2 ** (qbits - 1), 2 ** qbits)
     a = crt(1, q1, -1, q2)

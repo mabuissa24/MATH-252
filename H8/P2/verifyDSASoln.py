@@ -1,4 +1,5 @@
 def verifyDSA(p,q,g,A,d,s1,s2):
+    # Verifies given DSA signature
     exp1 = (modpow(s2, -1, q) * d) % q
     exp2 = (modpow(s2, -1, q) * s1) % q
     check = ((modpow(g, exp1, p) * modpow(A, exp2, p)) % p) % q

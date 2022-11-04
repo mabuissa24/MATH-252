@@ -2,6 +2,7 @@ import random
 
 
 def dsaBlind(p,q,g,A):
+    # Creates a blind forgery for a DSA public key (the signature is valid but the text is unreadable)
     i = random.randint(1, q)
     j = random.randint(1, q)
     while modpow(j, -1, q) is None:

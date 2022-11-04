@@ -1,4 +1,5 @@
 def decipherElgamal(p,g,a,c1,c2):
+    # Returns the message given by the given numbers according to Elgamal encryption 
     m = modpow(c1, -1 * a, p)
     m = (m * c2) % p
     return m

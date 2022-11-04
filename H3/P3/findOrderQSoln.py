@@ -1,5 +1,7 @@
 import random
+
 def findOrderQ(q,p):
+    # Returns the order of q mod p
     if (p - 1) % q != 0:
         return None
     a = int(p * random.random())
